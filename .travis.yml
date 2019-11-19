@@ -9,8 +9,6 @@ env: GO111MODULE=on
 # responsibility to keep their compiler up to date.
 go:
   - 1.12.x
-  - master
-  - tip
 
 # Only clone the most recent commit.
 git:
@@ -38,7 +36,6 @@ jobs:
       # Advanced: optionally overwrite your default `script` step to skip the tests
       # script:
       #   — make
-      if: branch = master
       deploy:
         provider: script
         skip_cleanup: true
