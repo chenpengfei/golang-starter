@@ -21,7 +21,7 @@ notifications:
     - langyu0826@gmail.com
 
 before_install:
-  - go get -v ./...
+  - make download
 
 install:
   - make tools
