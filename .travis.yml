@@ -24,8 +24,11 @@ notifications:
 install:
   - make tools
 
+before_install:
+  - go get -v ./...
+
 script:
-  - env GO111MODULE=on make lint && make report-coverage
+  - make lint && make report-coverage
 
 jobs:
   include:
