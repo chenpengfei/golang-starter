@@ -24,7 +24,7 @@ notifications:
 install:
   - make tools
 
-before_install:
+before_script:
   - go get -v ./...
 
 script:
