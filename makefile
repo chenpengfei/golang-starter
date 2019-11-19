@@ -40,10 +40,10 @@ lint:
 	golangci-lint run ./...
 
 test: mock
-	go list $(TEST) | xargs -t -n4 go test -race $(TESTARGS) -timeout=2m -parallel=4
+	go test -v -race $(TEST) $(TESTARGS) -covermode=atomic
 
 coverprofile: mock
-	go test -race $(TEST) $(TESTARGS) -coverprofile=coverage.txt -covermode=atomic
+	go test -v -race $(TEST) $(TESTARGS) -covermode=atomic -coverprofile=coverage.txt
 
 coverage: coverprofile
 	go tool cover -html=coverage.txt
