@@ -23,7 +23,7 @@ notifications:
 install:
   - make tools
 
-before_install:
+before_script:
   - env GO111MODULE=on go get -v ./...
 
 script:
@@ -37,11 +37,10 @@ jobs:
       name: "Semantic Release"
       # Advanced: optionally overwrite your default `script` step to skip the tests
       # script:
-      #   - make
+      #   — make
+      if: branch = master
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          # Use nvm to install and use the Node LTS version (nvm is installed on all Travis images)
-          - nvm install lts/*
-          - npx semantic-release
+        # Use nvm to install and use the Node LTS version (nvm is installed on all Travis images)
+        script: nvm install lts/* && npx semantic-release
