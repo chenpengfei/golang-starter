@@ -27,6 +27,7 @@ install:
 script:
   - env GO111MODULE=on make lint
   - env GO111MODULE=on make report-coverage
+  - nvm install 10
 
 jobs:
   include:
@@ -40,4 +41,4 @@ jobs:
         provider: script
         skip_cleanup: true
         # Use nvm to install and use the Node LTS version (nvm is installed on all Travis images)
-        script: nvm install lts/* && npx semantic-release
+        script: npx semantic-release
