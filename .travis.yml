@@ -18,11 +18,11 @@ notifications:
   email:
     - langyu0826@gmail.com
 
-before_install:
-  - env GO111MODULE=on go get -v ./...
-
 install:
   - env GO111MODULE=on make tools
+
+before_script:
+  - env GO111MODULE=on go get -v ./...
 
 script:
   - env GO111MODULE=on make lint
