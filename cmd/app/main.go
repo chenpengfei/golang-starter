@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golang-starter/pkg/tools"
+	"github.com/chenpengfei/golang-starter/pkg/tools"
 )
 
 func main() {

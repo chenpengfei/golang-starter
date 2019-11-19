@@ -1,4 +1,4 @@
-module golang-starter
+module github.com/chenpengfei/golang-starter
 
 go 1.12
 
