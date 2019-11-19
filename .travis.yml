@@ -21,12 +21,6 @@ notifications:
   email:
     - langyu0826@gmail.com
 
-before_install:
-  - make download
-
-install:
-  - make tools
-
 script:
   make lint && make report-coverage
 
