@@ -25,7 +25,7 @@ install:
   - make tools
 
 script:
-  make lint && make report-coverage
+  - env GO111MODULE=on make lint && make report-coverage
 
 jobs:
   include:
