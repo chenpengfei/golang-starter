@@ -23,8 +23,8 @@ notifications:
 install:
   - make tools
 
-before_script:
-  - go get -v ./...
+before_install:
+  - env GO111MODULE=on go get -v ./...
 
 script:
   - env GO111MODULE=on make lint
