@@ -31,10 +31,10 @@ download:
 	go mod download
 
 run:
-	go run examples/scuttlebutt/main.go
+	go run cmd/app/main.go
 
 benchmark:
-	go test -bench=. examples/pull-stream/random_test.go examples/pull-stream/random.go
+	go test -bench=. pkg/tools/cal_test.go pkg/tools/cal.go
 
 lint:
 	golangci-lint run ./...
@@ -58,9 +58,6 @@ semantic-release:
 
 fmt:
 	gofmt -w $(GOFMT_FILES)
-
-fmtcheck:
-	@sh -c "'$(CURDIR)/scripts/gofmtcheck.sh'"
 
 # generate runs `go generate` to build the dynamically generated
 # source files, except the protobuf stubs, which are built instead with

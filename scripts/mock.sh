@@ -11,5 +11,5 @@ DIR="$( cd -P "$( dirname "$SOURCE" )/.." && pwd )"
 cd "$DIR"
 
 rm -rf test/mocks
-mkdir -p test/mocks/service
-#mockgen -package=mservice -source=internal/app/service/probe.go > test/mocks/service/probe.go
+mkdir -p test/mocks/tools
+mockgen -package=mtools -source=pkg/tools/cal.go > test/mocks/tools/cal.go
