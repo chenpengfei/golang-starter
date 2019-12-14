@@ -28,7 +28,7 @@ Golang Starter，用于创建符合 Semantic Release 规范的初始仓库
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ## FAQ
-`make install` 提示错误 `rollbackFailedOptional: verb npm-session 8c37f8a1a41ff065`，执行以下步骤解决
+`make init` 提示错误 `rollbackFailedOptional: verb npm-session 8c37f8a1a41ff065`，执行以下步骤解决
 ```
 > npm config rm proxy
 > npm config rm https-proxy
