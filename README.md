@@ -1,4 +1,4 @@
-# golang-stater
+# golang-starter
 [![Build Status](https://travis-ci.com/chenpengfei/golang-starter.svg)](https://travis-ci.com/chenpengfei/golang-starter)
 [![Coverage Status](https://coveralls.io/repos/github/chenpengfei/golang-starter/badge.svg)](https://coveralls.io/github/chenpengfei/golang-starter)
 
